@@ -4,11 +4,11 @@
 #include "student.h"
 using namespace std;
 namespace nlohmann {
-    void to_json(nlohmann::json& j, const Student& s) {
+    void to_json(nlohmann::json& j, const elev& s) {
         j = nlohmann::json{{"nr_mat", s.getnr_mat()}, {"nume", s.getnume()}, {"med_adm", s.getmed_adm()}, {"nota1",s.getnota1()},{"nota2",s.getnota2()},{"nota3",s.getnota3()}};
     }
 
-    void from_json(const nlohmann::json& j, Student& s) {
+    void from_json(const nlohmann::json& j, elev& s) {
        s.setnr_mat(j.at("nr_mat").get<int>());
         s.setnume(j.at("nume").get<string>());
         s.setmed_adm(j.at("med_adm").get<double>());
@@ -20,27 +20,27 @@ namespace nlohmann {
 using json = nlohmann::json;
 
 int main() {
-    // Create a Student object
-    Student a(1,"Popescu Ionut",7.8,6,8,8);
+    // Create a elev object
+    elev a(1,"Popescu Ionut",7.8,6,8,8);
 
     // Serialize to JSON
     json j = a;
     cout << j.dump(4) << endl;
 
     // Write JSON to file
-   ofstream o("student.json");
+   ofstream o("elev.json");
     o << j.dump(4);
     o.close();
 
     // Read JSON from file
-   ifstream i("student.json");
+   ifstream i("elev.json");
     json j2;
     i >> j2;
 
-    // Deserialize to Student object
-    Student student2 = j2.get<Student>();
-    cout << "Numar matricol: " << student2.getnr_mat() << ", Nume: " << student2.getnume()<< ", Medie admitere: " << student2.getmed_adm() << ", Nota1: "<<student2.getnota1()
-    << ", Nota2: "<<student2.getnota2()<< ", Nota3: "<<student2.getnota3()<< endl;
+    // Deserialize to elev object
+    elev elev2 = j2.get<elev>();
+    cout << "Numar matricol: " << elev2.getnr_mat() << ", Nume: " << elev2.getnume()<< ", Medie admitere: " << elev2.getmed_adm() << ", Nota1: "<<elev2.getnota1()
+    << ", Nota2: "<<elev2.getnota2()<< ", Nota3: "<<elev2.getnota3()<< endl;
 
     return 0;
 }

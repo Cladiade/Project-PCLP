@@ -4,11 +4,11 @@
 #include <algorithm>
 #include <numeric>
 using namespace std;
-class Student
+class elev
 {
 public:
-    Student();
-    Student(int,string,double,double,double,double);
+    elev();
+    elev(int,string,double,double,double,double);
     void setnr_mat(int);
     void setnume(string);
     void setmed_adm(double);
@@ -32,7 +32,7 @@ private:
     double nota2;
     double nota3;
 };
-Student::Student(int a, string b, double c, double d, double e, double f)
+elev::elev(int a, string b, double c, double d, double e, double f)
 {
     nr_mat=a;
     nume=b;
@@ -41,7 +41,7 @@ Student::Student(int a, string b, double c, double d, double e, double f)
     nota2=e;
     nota3=f;
 }
-Student::Student()
+elev::elev()
 {
     nr_mat=0;
     nume="nume";
@@ -50,62 +50,62 @@ Student::Student()
     nota2=0;
     nota3=0;
 }
-void Student::setnr_mat(int a)
+void elev::setnr_mat(int a)
 {
     nr_mat=a;
 }
-void Student::setnume(string a)
+void elev::setnume(string a)
 {
     nume=a;
 }
-void Student::setmed_adm(double a)
+void elev::setmed_adm(double a)
 {
     med_adm=a;
 }
-void Student::setnota1(double a)
+void elev::setnota1(double a)
 {
     nota1=a;
 }
-void Student::setnota2(double a)
+void elev::setnota2(double a)
 {
     nota2=a;
 }
-void Student::setnota3(double a)
+void elev::setnota3(double a)
 {
     nota3=a;
 }
-int Student::getnr_mat() const
+int elev::getnr_mat() const
 {
     return nr_mat;
 }
-string Student::getnume() const
+string elev::getnume() const
 {
     return nume;
 }
-double Student::getmed_adm() const
+double elev::getmed_adm() const
 {
     return med_adm;
 }
-double Student::getnota1() const
+double elev::getnota1() const
 {
     return nota1;
 }
-double Student::getnota2() const
+double elev::getnota2() const
 {
     return nota2;
 }
-double Student::getnota3() const
+double elev::getnota3() const
 {
     return nota3;
 }
-int Student::situatie() const
+int elev::situatie() const
 {
   if(nota1>=5&&nota2>=5&&nota3>=5)
         return 1;
   else
     return 0;
 }
-int Student::bursa() const
+int elev::bursa() const
 {
     if(nota1>=5&&nota2>=5&&nota3>=5)
     {
@@ -120,7 +120,7 @@ int Student::bursa() const
     else
         return 0;
 }
-int Student::promovat() const
+int elev::promovat() const
 {
     if(nota1<5&&nota2<5&&nota3<5)
         return 0;

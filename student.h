@@ -41,6 +41,15 @@ Student::Student(int a, string b, double c, double d, double e, double f)
     nota2=e;
     nota3=f;
 }
+Student::Student()
+{
+    nr_mat=0;
+    nume="nume";
+    med_adm=0;
+    nota1=0;
+    nota2=0;
+    nota3=0;
+}
 void Student::setnr_mat(int a)
 {
     nr_mat=a;

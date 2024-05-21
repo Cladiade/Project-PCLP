@@ -13,20 +13,13 @@ Date::Date(int d, int m, int y)
  }
  year = y;
  day = checkDay(d); //valideaza ziua
- cout << "Constructorul obiectului de tip Date pentru ";
- print();
- cout << endl;
 }
 //Tipareste data in forma zi-luna-an
 void Date::print() const
  { cout << day << '-' << month << '-' << year; }
 //Destructorul folosit pentru confirmarea stergerii obiectului
-Date::~Date()
-{
- cout << "Destructorul obiectului de tip Date pentru ";
- print();
- cout << endl;
-}
+Date::~Date(){}
+
 int Date::checkDay( int testDay )
 {
  static const int daysPerMonth[13] =
@@ -44,4 +37,27 @@ int Date::checkDay( int testDay )
  << "Valoarea implicita este 1.\n";
  return 1;
 }
-
+int Date::getzi()
+{
+    return day;
+}
+int Date::getluna()
+{
+    return month;
+}
+int Date::getan()
+{
+    return year;
+}
+void Date::setan(int a)
+{
+  year=a;
+}
+void Date::setluna(int b)
+{
+    month=b;
+}
+void Date::setzi(int c)
+{
+    day=c;
+}

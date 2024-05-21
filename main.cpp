@@ -21,7 +21,7 @@ using json = nlohmann::json;
 
 int main() {
     // Create a Student object
-    Student a(1,"Popescu Ionut",7.8,6,8,8);
+    Student a(1,"Popescu Ionut",7.8,6,8,8,4,1,2004);
 
     // Serialize to JSON
     json j = a;

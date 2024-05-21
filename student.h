@@ -3,12 +3,13 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include "data.h"
 using namespace std;
 class Student
 {
 public:
     Student();
-    Student(int,string,double,double,double,double);
+    Student(int,string,double,double,double,double,int,int,int);
     void setnr_mat(int);
     void setnume(string);
     void setmed_adm(double);
@@ -31,8 +32,10 @@ private:
     double nota1;
     double nota2;
     double nota3;
+    Date datan;
 };
-Student::Student(int a, string b, double c, double d, double e, double f)
+Student::Student(int a, string b, double c, double d, double e, double f, int zi, int luna, int an)
+:datan(zi,luna,an)
 {
     nr_mat=a;
     nume=b;

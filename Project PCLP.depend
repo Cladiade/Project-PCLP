@@ -199,10 +199,17 @@
 	<any>
 	<string_view>
 
-1716275335 c:\users\gabi\desktop\teme facultate\project pclp\student.h
+1716275883 c:\users\gabi\desktop\teme facultate\project pclp\student.h
 	<iostream>
 	<string.h>
 	<vector>
 	<algorithm>
 	<numeric>
+	"data.h"
+
+1716275370 source:c:\users\gabi\desktop\teme facultate\project pclp\date.cpp
+	<iostream>
+	"data.h"
+
+1716275335 c:\users\gabi\desktop\teme facultate\project pclp\data.h
 

@@ -5,7 +5,8 @@ class Date
 {
  public:
  //constructor implicit
- Date();
+ Date(): day(1), month(1), year(100){}
+ //constructor explicit
  Date(int = 1, int = 1, int = 1990);
  Date(const Date& other) = default;
  Date(Date&& other) = default;
@@ -18,12 +19,6 @@ class Date
  void setluna(int);
  void setan(int);
  void printD() const;
- Date(Date& p)
- {
- setzi(p.day);
- setluna(p.month);
- setan(p.year);
- }
  private:
  int day; //1-12
  int month;//1-31

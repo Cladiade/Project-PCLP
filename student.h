@@ -16,6 +16,7 @@ public:
     void setnota1(double);
     void setnota2(double);
     void setnota3(double);
+    void setdatazi(int);
     int getdatazi() const;
     int getnr_mat() const;
     string getnume() const;
@@ -57,6 +58,10 @@ Student::Student():datan(1,1,100)
     nota1=0;
     nota2=0;
     nota3=0;
+}
+void Student::setdatazi(int a)
+{
+    datan.setzi(a);
 }
 void Student::setnr_mat(int a)
 {

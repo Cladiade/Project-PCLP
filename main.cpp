@@ -16,7 +16,7 @@ namespace nlohmann {
         s.setnota1(j.at("nota1").get<double>());
         s.setnota2(j.at("nota2").get<double>());
         s.setnota3(j.at("nota3").get<double>());
-        s.setdatan(j.at("zi").get<int>());
+        s.setdatazi(j.at("zi").get<int>());
     }
 }
 using json = nlohmann::json;

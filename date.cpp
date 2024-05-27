@@ -19,7 +19,6 @@ void Date::printD() const
  { cout << day << '-' << month << '-' << year; }
 //Destructorul folosit pentru confirmarea stergerii obiectului
 Date::~Date(){}
-
 int Date::checkDay( int testDay )
 {
  static const int daysPerMonth[13] =

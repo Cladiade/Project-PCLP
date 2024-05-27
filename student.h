@@ -48,7 +48,7 @@ Student::Student(int a, string b, double c, double d, double e, double f, int zi
     nota2=e;
     nota3=f;
 }
-Student::Student()
+Student::Student():datan(1,1,2000)
 {
     nr_mat=0;
     nume="nume";
@@ -56,9 +56,6 @@ Student::Student()
     nota1=0;
     nota2=0;
     nota3=0;
-    datan.setan(2000);
-    datan.setzi(1);
-    datan.setluna(1);
 }
 void Student::setnr_mat(int a)
 {

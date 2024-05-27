@@ -36,7 +36,7 @@ int Date::checkDay( int testDay )
  << "Valoarea implicita este 1.\n";
  return 1;
 }
-int Date::getzi()
+int Date::getzi() const
 {
     return day;
 }

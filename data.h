@@ -14,7 +14,7 @@ class Date
  ~Date();
  Date& operator=(const Date& other) = default;
  Date& operator=(Date&& other) = default;
- int getzi();
+ int getzi() const;
  int getluna();
  int getan();
  void setzi(int);

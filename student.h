@@ -17,7 +17,11 @@ public:
     void setnota2(double);
     void setnota3(double);
     void setdatazi(int);
+    void setdataluna(int);
+    void setdataan(int);
     int getdatazi() const;
+    int getdataluna() const;
+    int getdataan() const;
     int getnr_mat() const;
     string getnume() const;
     double getmed_adm() const;
@@ -59,6 +63,14 @@ Student::Student():datan(1,1,100)
     nota2=0;
     nota3=0;
 }
+void Student::setdataan(int a)
+{
+    datan.setan(a);
+}
+void Student::setdataluna(int a)
+{
+    datan.setluna(a);
+}
 void Student::setdatazi(int a)
 {
     datan.setzi(a);
@@ -90,6 +102,14 @@ void Student::setnota3(double a)
 int Student::getnr_mat() const
 {
     return nr_mat;
+}
+int Student::getdataan() const
+{
+    return datan.getan();
+}
+int Student::getdataluna() const
+{
+    return datan.getluna();
 }
 int Student::getdatazi() const
 {

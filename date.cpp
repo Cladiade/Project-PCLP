@@ -40,11 +40,11 @@ int Date::getzi() const
 {
     return day;
 }
-int Date::getluna()
+int Date::getluna() const
 {
     return month;
 }
-int Date::getan()
+int Date::getan() const
 {
     return year;
 }

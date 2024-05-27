@@ -6,7 +6,7 @@ using namespace std;
 namespace nlohmann {
     void to_json(nlohmann::json& j, const Student& s) {
         j = nlohmann::json{{"nr_mat", s.getnr_mat()}, {"nume", s.getnume()}, {"med_adm", s.getmed_adm()}, {"nota1",s.getnota1()},{"nota2",s.getnota2()},{"nota3",s.getnota3()},
-        {"zi",s.getdatazi()}};
+        {"zi",s.getdatazi()},{"luna",s.getdataluna()},{"an",s.getdataan()}};
     }
 
     void from_json(const nlohmann::json& j, Student& s) {
@@ -17,6 +17,8 @@ namespace nlohmann {
         s.setnota2(j.at("nota2").get<double>());
         s.setnota3(j.at("nota3").get<double>());
         s.setdatazi(j.at("zi").get<int>());
+        s.setdataluna(j.at("luna").get<int>());
+        s.setdataan(j.at("an").get<int>());
     }
 }
 using json = nlohmann::json;

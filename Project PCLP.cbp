@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="data.h" />
+		<Unit filename="date.cpp" />
 		<Unit filename="json.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="student.h" />

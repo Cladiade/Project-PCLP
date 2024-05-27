@@ -25,7 +25,7 @@ public:
     int situatie() const;
     int bursa() const;
     int promovat() const;
-    Date getdata();
+    void getdata();
 private:
     int nr_mat;
     string nume;
@@ -131,7 +131,7 @@ int Student::promovat() const
     else
         return 1;
 }
-Date Student::getdata()
+void Student::getdata()
 {
-cout << datan.getzi() << '-' << datan.getluna()<< '-' <<datan.getan();
+datan.printD();
 }

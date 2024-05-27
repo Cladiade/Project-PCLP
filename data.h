@@ -14,6 +14,13 @@ class Date
  void setzi(int);
  void setluna(int);
  void setan(int);
+ void printD() const;
+ Date(Date& p)
+ {
+ setzi(p.day);
+ setluna(p.month);
+ setan(p.year);
+ }
  private:
  int day; //1-12
  int month;//1-31
@@ -21,16 +28,5 @@ class Date
  //functie utilitara de testare a
  //corectitudinii zilei pentru month si year
  int checkDay(int);
- Date(Date& p)
- {
- setzi(p.day);
- setluna(p.month);
- setan(p.year);
- }
- ostream& operator<<(ostream& o, Date& p){
-    o << p.getzi() << '-' << p.getluna()<< '-' <<p.getan();
-    return o;
-}
-
 };
 #endif

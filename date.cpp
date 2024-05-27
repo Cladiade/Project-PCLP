@@ -15,7 +15,7 @@ Date::Date(int d, int m, int y)
  day = checkDay(d); //valideaza ziua
 }
 //Tipareste data in forma zi-luna-an
-void Date::print() const
+void Date::printD() const
  { cout << day << '-' << month << '-' << year; }
 //Destructorul folosit pentru confirmarea stergerii obiectului
 Date::~Date(){}

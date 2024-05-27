@@ -40,9 +40,10 @@ int main() {
     // Deserialize to Student object
     Student Student2 = j2.get<Student>();
     cout << "Numar matricol: " << Student2.getnr_mat() << ", Nume: " << Student2.getnume()<< ", Medie admitere: " << Student2.getmed_adm() << ", Nota1: "<<Student2.getnota1()
-    << ", Nota2: "<<Student2.getnota2()<< ", Nota3: "<<Student2.getnota3()<< " "<< Student2.getdata()<<endl;
+    << ", Nota2: "<<Student2.getnota2()<< ", Nota3: "<<Student2.getnota3()<< " ";
+    Student2.getdata();
+    cout<<endl;
 
-    }
 
     return 0;
 }

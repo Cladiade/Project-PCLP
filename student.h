@@ -26,6 +26,9 @@ public:
     int bursa() const;
     int promovat() const;
     void getdata();
+    Student(const Student& other) = default;
+    Student(Student&& other) = default;
+    ~Student() = default;
 private:
     int nr_mat;
     string nume;
@@ -53,6 +56,9 @@ Student::Student()
     nota1=0;
     nota2=0;
     nota3=0;
+    datan.setan(2000);
+    datan.setzi(1);
+    datan.setluna(1);
 }
 void Student::setnr_mat(int a)
 {

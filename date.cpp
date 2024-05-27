@@ -14,6 +14,12 @@ Date::Date(int d, int m, int y)
  year = y;
  day = checkDay(d); //valideaza ziua
 }
+Date::Date()
+{
+    day=1;
+    month=1;
+    year=2000;
+}
 //Tipareste data in forma zi-luna-an
 void Date::printD() const
  { cout << day << '-' << month << '-' << year; }

@@ -5,7 +5,10 @@ class Date
 {
  public:
  //constructor implicit
+ Date();
  Date(int = 1, int = 1, int = 1990);
+ Date(const Date& other) = default;
+ Date(Date&& other) = default;
  void print() const;
  ~Date();
  int getzi();

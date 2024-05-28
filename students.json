@@ -28,7 +28,7 @@
         "nota1": 9.0,
         "nota2": 10.0,
         "nota3": 10.0,
-        "nr_mat": 4,
+        "nr_mat": 3,
         "nume": "Enescu_David",
         "zi": 3
     },
@@ -130,5 +130,27 @@
         "nr_mat": 13,
         "nume": "Margineanu_Mihai",
         "zi": 1
+    },
+    {
+        "an": 2004,
+        "luna": 2,
+        "med_adm": 4.0,
+        "nota1": 4.0,
+        "nota2": 4.0,
+        "nota3": 4.0,
+        "nr_mat": 14,
+        "nume": "Gigi_Becali",
+        "zi": 2
+    },
+    {
+        "an": 2000,
+        "luna": 3,
+        "med_adm": 5.0,
+        "nota1": 4.0,
+        "nota2": 4.0,
+        "nota3": 5.0,
+        "nr_mat": 15,
+        "nume": "Vadim_Tudor",
+        "zi": 3
     }
 ]

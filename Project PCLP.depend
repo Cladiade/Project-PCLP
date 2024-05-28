@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1716887812 source:c:\users\gabi\desktop\teme facultate\project pclp\main.cpp
+1716888263 source:c:\users\gabi\desktop\teme facultate\project pclp\main.cpp
 	<iostream>
 	"json.hpp"
 	"student.h"
@@ -214,7 +214,7 @@
 
 1716886692 c:\users\gabi\desktop\teme facultate\project pclp\data.h
 
-1716888212 c:\users\gabi\desktop\teme facultate\project pclp\functii.h
+1716889757 c:\users\gabi\desktop\teme facultate\project pclp\functii.h
 	<iostream>
 	<fstream>
 	<vector>

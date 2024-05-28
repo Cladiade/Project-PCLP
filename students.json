@@ -130,5 +130,16 @@
         "nr_mat": 12,
         "nume": "Iulius_Cezar",
         "zi": 6
+    },
+    {
+        "an": 2004,
+        "luna": 1,
+        "med_adm": 10.0,
+        "nota1": 10.0,
+        "nota2": 10.0,
+        "nota3": 10.0,
+        "nr_mat": 13,
+        "nume": "Margineanu_Mihai",
+        "zi": 1
     }
 ]

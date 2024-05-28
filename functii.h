@@ -44,6 +44,7 @@ void saveStudentsToFile(const vector<Student>& students, const string& filename)
         cerr << "Failed to open file for writing: " << filename << endl;
     }
 }
+
 vector<Student> loadStudentsFromFile(const string& filename)
 {
     ifstream i(filename);
@@ -71,6 +72,23 @@ void addStudentToFile(const Student& newStudent, const string& filename)
 
     // Save the updated list back to the file
     saveStudentsToFile(students, filename);
+}
+// Function to delete a student from the JSON file by their `nr_mat`
+void deleteStudentFromFile(int nr_mat, const string& filename) {
+    // Load existing students
+    vector<Student> students = loadStudentsFromFile(filename);
+
+    // Find and remove the student
+    auto it = std::remove_if(students.begin(), students.end(),
+                             [nr_mat](const Student& s) { return s.getnr_mat() == nr_mat; });
+
+    if (it != students.end()) {
+        students.erase(it, students.end());
+        // Save the updated list back to the file
+        saveStudentsToFile(students, filename);
+    } else {
+        cout << "Student with nr_mat " << nr_mat << " not found." << endl;
+    }
 }
 // Serialize to JSON
 vector<Student> students = loadStudentsFromFile("students.json");
@@ -111,7 +129,8 @@ void verifica (string x)
         cout<<endl;
         cout<<"Scrieti comanda 'afiseaza' pentru a afisa studentii din grupa "<<endl;
         cout<<"Scrieti comanda 'inchide' pentru a inchide corespunzator programul "<<endl;
-        cout<<"Scrieti cmanda 'adaugastudent' pentru a adauga un tudent in grupa "<<endl;
+        cout<<"Scrieti comanda 'adaugastudent' pentru a adauga un tudent in grupa "<<endl;
+        cout<<"Scrieti comanda 'stergestudent' pentru a sterge un student din grupa "<<endl;
 
     }
     if(x=="adaugastudent")
@@ -125,9 +144,14 @@ void verifica (string x)
         cin>>e>>f>>g>>h>>i>>b>>c>>d;
         Student newStudent(nr,e,f,g,h,i,b,c,d);
         addStudentToFile(newStudent,"students.json");
-        vector<Student> students = loadStudentsFromFile("students.json");
-        json j = students;
-
+    }
+    if(x=="stergestudent")
+    {
+        ok=1;
+        int a;
+        cout<<"Dati numarul matricol al studentului care urmeaza sa fie sters "<<endl;
+        cin>>a;
+        deleteStudentFromFile(a,"students.json");
     }
     if(ok==0)
         cout<<"Comanda incorecta"<<endl;

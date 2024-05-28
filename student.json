@@ -20,5 +20,104 @@
         "nr_mat": 2,
         "nume": "Popescu_Ionut",
         "zi": 4
+    },
+    {
+        "an": 2004,
+        "luna": 12,
+        "med_adm": 5.5,
+        "nota1": 4.0,
+        "nota2": 4.0,
+        "nota3": 4.0,
+        "nr_mat": 3,
+        "nume": "Val_Mihai",
+        "zi": 3
+    },
+    {
+        "an": 2004,
+        "luna": 10,
+        "med_adm": 9.5,
+        "nota1": 9.0,
+        "nota2": 10.0,
+        "nota3": 10.0,
+        "nr_mat": 4,
+        "nume": "Enescu_David",
+        "zi": 3
+    },
+    {
+        "an": 2005,
+        "luna": 3,
+        "med_adm": 8.699999809265137,
+        "nota1": 9.0,
+        "nota2": 8.0,
+        "nota3": 9.0,
+        "nr_mat": 5,
+        "nume": "Rusu_Andrei",
+        "zi": 22
+    },
+    {
+        "an": 2004,
+        "luna": 6,
+        "med_adm": 8.0,
+        "nota1": 7.0,
+        "nota2": 9.0,
+        "nota3": 10.0,
+        "nr_mat": 6,
+        "nume": "Georgescu_Andreea",
+        "zi": 8
+    },
+    {
+        "an": 2003,
+        "luna": 2,
+        "med_adm": 8.0,
+        "nota1": 6.0,
+        "nota2": 5.0,
+        "nota3": 7.0,
+        "nr_mat": 7,
+        "nume": "Chirila_Denisa",
+        "zi": 17
+    },
+    {
+        "an": 2003,
+        "luna": 1,
+        "med_adm": 6.0,
+        "nota1": 4.0,
+        "nota2": 5.0,
+        "nota3": 5.0,
+        "nr_mat": 8,
+        "nume": "Istrate_Marius",
+        "zi": 30
+    },
+    {
+        "an": 2004,
+        "luna": 8,
+        "med_adm": 8.0,
+        "nota1": 9.0,
+        "nota2": 8.0,
+        "nota3": 8.0,
+        "nr_mat": 9,
+        "nume": "Petrescu_Cristian",
+        "zi": 6
+    },
+    {
+        "an": 2004,
+        "luna": 7,
+        "med_adm": 7.0,
+        "nota1": 9.0,
+        "nota2": 9.0,
+        "nota3": 9.0,
+        "nr_mat": 10,
+        "nume": "Coman_Octavian",
+        "zi": 12
+    },
+    {
+        "an": 2003,
+        "luna": 4,
+        "med_adm": 7.599999904632568,
+        "nota1": 6.0,
+        "nota2": 8.0,
+        "nota3": 8.0,
+        "nr_mat": 11,
+        "nume": "Gorgea_Victor",
+        "zi": 15
     }
 ]

@@ -30,30 +30,39 @@ void from_json(const nlohmann::json& j, Student& s)
 using json = nlohmann::json;
 
 // Create a Student object
-void saveStudentsToFile(const vector<Student>& students, const string& filename) {
+void saveStudentsToFile(const vector<Student>& students, const string& filename)
+{
     json j = students;
     ofstream o(filename);
-    if (o.is_open()) {
+    if (o.is_open())
+    {
         o << j.dump(4);
         o.close();
-    } else {
+    }
+    else
+    {
         cerr << "Failed to open file for writing: " << filename << endl;
     }
 }
-vector<Student> loadStudentsFromFile(const string& filename) {
+vector<Student> loadStudentsFromFile(const string& filename)
+{
     ifstream i(filename);
     vector<Student> students;
-    if (i.is_open()) {
+    if (i.is_open())
+    {
         json j;
         i >> j;
         students = j.get<vector<Student>>();
         i.close();
-    } else {
+    }
+    else
+    {
         cerr << "Failed to open file for reading: " << filename << endl;
     }
     return students;
 }
-void addStudentToFile(const Student& newStudent, const string& filename) {
+void addStudentToFile(const Student& newStudent, const string& filename)
+{
     // Load existing students
     vector<Student> students = loadStudentsFromFile(filename);
 
@@ -82,8 +91,10 @@ void verifica (string x)
     if(x=="afiseaza")
     {
         ok=1;
+
         // Deserialize to Student object
-        vector<Student> students = j2.get<vector<Student>>();
+        vector<Student> students = loadStudentsFromFile("students.json");
+        json j = students;
 
         for (const auto& student : students)
         {
@@ -106,13 +117,17 @@ void verifica (string x)
     if(x=="adaugastudent")
     {
         ok=1;
-        int a,b,c,d;
+        int nr,b,c,d;
         string e;
         float f,g,h,i;
-        cout<<endl<<"Dati pe rand urmatoarele valori: numar matricol, nume, media de admitere, nota1, nota2, nota3 si data nasterii(zi-luna-an)"<<endl;
-        cin>>a>>e>>f>>g>>h>>i>>b>>c>>d;
-        Student newStudent(a,e,f,g,h,i,b,c,d);
+        nr=students.size()+1;
+        cout<<endl<<"Dati pe rand urmatoarele valori: nume, media de admitere, nota1, nota2, nota3 si data nasterii(zi-luna-an)"<<endl;
+        cin>>e>>f>>g>>h>>i>>b>>c>>d;
+        Student newStudent(nr,e,f,g,h,i,b,c,d);
         addStudentToFile(newStudent,"students.json");
+        vector<Student> students = loadStudentsFromFile("students.json");
+        json j = students;
+
     }
     if(ok==0)
         cout<<"Comanda incorecta"<<endl;

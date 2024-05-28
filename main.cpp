@@ -14,6 +14,8 @@ int main()
     {
         verifica(x);
         cin>>x;
+        vector<Student> students = loadStudentsFromFile("students.json");
+      json j = students;
     }
 
 

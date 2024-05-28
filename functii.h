@@ -90,6 +90,47 @@ void deleteStudentFromFile(int nr_mat, const string& filename) {
         cout << "Student with nr_mat " << nr_mat << " not found." << endl;
     }
 }
+void AfiseazaBursaMerit(const string& filename) {
+    vector<Student> students = loadStudentsFromFile(filename);
+
+    cout <<"Studentii cu bursa de merit sunt "<< endl;
+    for (const auto& student : students) {
+        if (student.bursa()==2) {
+            cout << "Numar matricol: " << student.getnr_mat() << ", Nume: " << student.getnume()<< ", Medie admitere: " << student.getmed_adm() << ", Nota1: "<<student.getnota1()
+                 << ", Nota2: "<<student.getnota2()<< ", Nota3: "<<student.getnota3()<< ", Data nasterii: ";
+            student.getdata();
+            cout<<endl<<endl;
+
+        }
+    }
+}
+void AfiseazaBursaStudii(const string& filename){
+vector<Student> students = loadStudentsFromFile(filename);
+
+    cout <<"Studentii cu bursa de merit sunt "<< endl;
+    for (const auto& student : students) {
+        if (student.bursa()==1) {
+            cout << "Numar matricol: " << student.getnr_mat() << ", Nume: " << student.getnume()<< ", Medie admitere: " << student.getmed_adm() << ", Nota1: "<<student.getnota1()
+                 << ", Nota2: "<<student.getnota2()<< ", Nota3: "<<student.getnota3()<< ", Data nasterii: ";
+            student.getdata();
+            cout<<endl<<endl;}}
+}
+void StergeStudentiSlabi(const string& filename) {
+    vector<Student> students = loadStudentsFromFile(filename);
+
+    auto it = std::remove_if(students.begin(), students.end(),
+                             [](const Student& s) {
+                                 return !s.promovat();
+                             });
+
+    if (it != students.end()) {
+        students.erase(it, students.end());
+        // Save the updated list back to the file
+        saveStudentsToFile(students, filename);
+    } else {
+        cout << "No students found that did not promote." << endl;
+    }
+}
 // Serialize to JSON
 vector<Student> students = loadStudentsFromFile("students.json");
 json j = students;
@@ -131,7 +172,8 @@ void verifica (string x)
         cout<<"Scrieti comanda 'inchide' pentru a inchide corespunzator programul "<<endl;
         cout<<"Scrieti comanda 'adaugastudent' pentru a adauga un tudent in grupa "<<endl;
         cout<<"Scrieti comanda 'stergestudent' pentru a sterge un student din grupa "<<endl;
-
+        cout<<"Scrieti comanda 'AFISARE' pentru mai multe moduri de afisare a studentilor "<<endl;
+        cout<<"Scrieti comanda 'sterge_nepromovati' pentru a sterge studentii care nu au promovat "<<endl;
     }
     if(x=="adaugastudent")
     {
@@ -153,7 +195,42 @@ void verifica (string x)
         cin>>a;
         deleteStudentFromFile(a,"students.json");
     }
+    if(x=="AFISARE")
+    {   ok=1;
+         string y;
+        cout<<"Pentru a afisa studentii cu bursa de merit scrieti: 'bursa_merit'"<<endl;
+        cout<<"Pentru a afisa studentii cu bursa de studii scrieti: 'bursa_studii'"<<endl;
+        cout<<"Pentru a anula comanda scrieti: 'anuleaza'"<<endl;
+        int ok1=0;
+        while(ok1==0)
+       {
+           cin>>y;
+        if(y=="bursa_merit")
+        {
+            ok1=1;
+            AfiseazaBursaMerit("students.json");
+        }
+        if(y=="bursa_studii")
+        {
+            ok1=1;
+            AfiseazaBursaStudii("students.json");
+        }
+        if(y=="anulare")
+        {
+            ok1=1;
+            cout<<"Comanda a fost anulata"<<endl;
+        }
+        if(ok1==0)
+
+            cout<<"Comanda incorecta"<<endl;
+
+        }}
+        if(x=="sterge_nepromovati")
+        {
+            ok=1;
+            StergeStudentiSlabi("students.json");
+        }
     if(ok==0)
-        cout<<"Comanda incorecta"<<endl;
-}
+        cout<<"Comanda incorecta"<<endl;}
+
 #endif

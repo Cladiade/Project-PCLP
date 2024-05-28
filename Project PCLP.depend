@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1716837748 source:c:\users\gabi\desktop\teme facultate\project pclp\main.cpp
+1716887812 source:c:\users\gabi\desktop\teme facultate\project pclp\main.cpp
 	<iostream>
-	<fstream>
 	"json.hpp"
 	"student.h"
+	"functii.h"
+	<string.h>
 
 1716226912 c:\users\gabi\desktop\teme facultate\project pclp\json.hpp
 	<algorithm>
@@ -199,7 +200,7 @@
 	<any>
 	<string_view>
 
-1716837748 c:\users\gabi\desktop\teme facultate\project pclp\student.h
+1716886692 c:\users\gabi\desktop\teme facultate\project pclp\student.h
 	<iostream>
 	<string.h>
 	<vector>
@@ -212,4 +213,11 @@
 	"data.h"
 
 1716886692 c:\users\gabi\desktop\teme facultate\project pclp\data.h
+
+1716888212 c:\users\gabi\desktop\teme facultate\project pclp\functii.h
+	<iostream>
+	<fstream>
+	<vector>
+	"student.h"
+	"json.hpp"
 

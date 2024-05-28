@@ -1,3 +1,5 @@
+#ifndef STUDENT_H
+#define STUDENT_H
 #include <iostream>
 #include <string.h>
 #include <vector>
@@ -35,8 +37,10 @@ public:
     Student(const Student& other) = default;
     Student(Student&& other) = default;
     ~Student() = default;
-    Student& operator=(const Student& other) {
-        if (this != &other) {
+    Student& operator=(const Student& other)
+    {
+        if (this != &other)
+        {
             nr_mat = other.nr_mat;
             nume = other.nume;
             med_adm = other.med_adm;
@@ -47,8 +51,10 @@ public:
         }
         return *this;
     }
-     Student& operator=(Student&& other) noexcept {
-        if (this != &other) {
+    Student& operator=(Student&& other) noexcept
+    {
+        if (this != &other)
+        {
             nr_mat = other.nr_mat;
             nume = std::move(other.nume);
             med_adm = other.med_adm;
@@ -69,7 +75,7 @@ private:
     Date datan;
 };
 Student::Student(int a, string b, double c, double d, double e, double f, int zi, int luna, int an)
-:datan(zi,luna,an)
+    :datan(zi,luna,an)
 {
     nr_mat=a;
     nume=b;
@@ -137,7 +143,7 @@ int Student::getdataluna() const
 }
 int Student::getdatazi() const
 {
-  return datan.getzi();
+    return datan.getzi();
 }
 string Student::getnume() const
 {
@@ -161,10 +167,10 @@ double Student::getnota3() const
 }
 int Student::situatie() const
 {
-  if(nota1>=5&&nota2>=5&&nota3>=5)
+    if(nota1>=5&&nota2>=5&&nota3>=5)
         return 1;
-  else
-    return 0;
+    else
+        return 0;
 }
 int Student::bursa() const
 {
@@ -172,8 +178,7 @@ int Student::bursa() const
     {
         if((nota1+nota2+nota3)/3>=9.5)
             return 2;
-        else
-            if((nota1+nota2+nota3)/3>=8.5)
+        else if((nota1+nota2+nota3)/3>=8.5)
             return 1;
         else
             return 0;
@@ -190,5 +195,6 @@ int Student::promovat() const
 }
 void Student::getdata() const
 {
-datan.printD();
+    datan.printD();
 }
+#endif

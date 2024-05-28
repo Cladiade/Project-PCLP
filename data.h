@@ -3,30 +3,30 @@
 using namespace std;
 class Date
 {
- public:
- //constructor implicit
- Date(): day(1), month(1), year(100){}
- //constructor explicit
- Date(int = 1, int = 1, int = 1990);
- Date(const Date& other) = default;
- Date(Date&& other) = default;
- void print() const;
- ~Date();
- Date& operator=(const Date& other) = default;
- Date& operator=(Date&& other) = default;
- int getzi() const;
- int getluna() const;
- int getan() const;
- void setzi(int);
- void setluna(int);
- void setan(int);
- void printD() const;
- private:
- int day; //1-12
- int month;//1-31
- int year;
- //functie utilitara de testare a
- //corectitudinii zilei pentru month si year
- int checkDay(int);
+public:
+//constructor implicit
+    Date(): day(1), month(1), year(100) {}
+//constructor explicit
+    Date(int = 1, int = 1, int = 1990);
+    Date(const Date& other) = default;
+    Date(Date&& other) = default;
+    void print() const;
+    ~Date();
+    Date& operator=(const Date& other) = default;
+    Date& operator=(Date&& other) = default;
+    int getzi() const;
+    int getluna() const;
+    int getan() const;
+    void setzi(int);
+    void setluna(int);
+    void setan(int);
+    void printD() const;
+private:
+    int day; //1-12
+    int month;//1-31
+    int year;
+//functie utilitara de testare a
+//corectitudinii zilei pentru month si year
+    int checkDay(int);
 };
 #endif

@@ -1,11 +1,112 @@
-{
-    "an": 2004,
-    "luna": 1,
-    "med_adm": 7.8,
-    "nota1": 6.0,
-    "nota2": 8.0,
-    "nota3": 8.0,
-    "nr_mat": 1,
-    "nume": "Popescu Ionut",
-    "zi": 4
-}
+[
+    {
+        "an": 2004,
+        "luna": 1,
+        "med_adm": 7.8,
+        "nota1": 6.0,
+        "nota2": 8.0,
+        "nota3": 8.0,
+        "nr_mat": 1,
+        "nume": "Popescu Ionut",
+        "zi": 4
+    },
+    {
+        "an": 2004,
+        "luna": 6,
+        "med_adm": 8.5,
+        "nota1": 9.0,
+        "nota2": 8.5,
+        "nota3": 9.0,
+        "nr_mat": 2,
+        "nume": "Marin Alexandru",
+        "zi": 2
+    },
+    {
+        "an": 2004,
+        "luna": 9,
+        "med_adm": 5.0,
+        "nota1": 4.0,
+        "nota2": 4.0,
+        "nota3": 4.0,
+        "nr_mat": 3,
+        "nume": "Georgescu Mihnea",
+        "zi": 12
+    },
+    {
+        "an": 2004,
+        "luna": 2,
+        "med_adm": 5.5,
+        "nota1": 4.0,
+        "nota2": 4.0,
+        "nota3": 4.0,
+        "nr_mat": 4,
+        "nume": "Val Mihai",
+        "zi": 6
+    },
+    {
+        "an": 2004,
+        "luna": 10,
+        "med_adm": 8.7,
+        "nota1": 9.0,
+        "nota2": 8.0,
+        "nota3": 9.0,
+        "nr_mat": 5,
+        "nume": "Rusu Andrei",
+        "zi": 5
+    },
+    {
+        "an": 2004,
+        "luna": 12,
+        "med_adm": 7.0,
+        "nota1": 7.0,
+        "nota2": 9.0,
+        "nota3": 10.0,
+        "nr_mat": 6,
+        "nume": "Georgescu Andreea",
+        "zi": 20
+    },
+    {
+        "an": 2005,
+        "luna": 1,
+        "med_adm": 8.0,
+        "nota1": 6.0,
+        "nota2": 5.0,
+        "nota3": 7.0,
+        "nr_mat": 7,
+        "nume": "Chirila Denisa",
+        "zi": 2
+    },
+    {
+        "an": 2004,
+        "luna": 7,
+        "med_adm": 6.0,
+        "nota1": 4.0,
+        "nota2": 5.0,
+        "nota3": 5.0,
+        "nr_mat": 8,
+        "nume": "Istrate Marius",
+        "zi": 3
+    },
+    {
+        "an": 2005,
+        "luna": 5,
+        "med_adm": 8.0,
+        "nota1": 9.0,
+        "nota2": 8.0,
+        "nota3": 8.0,
+        "nr_mat": 9,
+        "nume": "Petrescu Cristian",
+        "zi": 2
+    },
+    {
+        "an": 2004,
+        "luna": 9,
+        "med_adm": 7.0,
+        "nota1": 9.0,
+        "nota2": 9.0,
+        "nota3": 9.0,
+        "nr_mat": 10,
+        "nume": "Coman Octavia",
+        "zi": 13
+    }
+]

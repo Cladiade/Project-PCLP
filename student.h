@@ -31,10 +31,34 @@ public:
     int situatie() const;
     int bursa() const;
     int promovat() const;
-    void getdata();
+    void getdata() const;
     Student(const Student& other) = default;
     Student(Student&& other) = default;
     ~Student() = default;
+    Student& operator=(const Student& other) {
+        if (this != &other) {
+            nr_mat = other.nr_mat;
+            nume = other.nume;
+            med_adm = other.med_adm;
+            nota1 = other.nota1;
+            nota2 = other.nota2;
+            nota3 = other.nota3;
+            datan = other.datan;
+        }
+        return *this;
+    }
+     Student& operator=(Student&& other) noexcept {
+        if (this != &other) {
+            nr_mat = other.nr_mat;
+            nume = std::move(other.nume);
+            med_adm = other.med_adm;
+            nota1 = other.nota1;
+            nota2 = other.nota2;
+            nota3 = other.nota3;
+            datan = std::move(other.datan);
+        }
+        return *this;
+    }
 private:
     int nr_mat;
     string nume;
@@ -164,7 +188,7 @@ int Student::promovat() const
     else
         return 1;
 }
-void Student::getdata()
+void Student::getdata() const
 {
 datan.printD();
 }
